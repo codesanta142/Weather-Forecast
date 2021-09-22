@@ -17,60 +17,89 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form id="search-form" class="mb-3">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                class="form-control"
-                id="city-input"
-                autocomplete="off"
-              />
+      <div class="wrapper">
+        <div class="weather-app">
+          <em>
+            Sunshine is delicious, rain is refreshing, wind braces us up, snow
+            is exhilarating; there is really no such thing as bad weather, only
+            different kinds of good weather.
+          </em>
+          <br /><br />
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="btn btn-primary w-100"
-              />
+          </form>
+          <div class="overview">
+            <h1 id="city">New York</h1>
+            <ul>
+              <li id="date">Friday 12:00</li>
+              <li id="description">Partly Cloudy</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature">12</strong>
+                  <span class="units">
+                    <a href="" id="celsius-link" class="active">°C</a> |
+                    <a href="" id="faren-link"> °F </a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity">34</span> %</li>
+                <li>Wind: <span id="wind">6</span> km/h</li>
+              </ul>
             </div>
           </div>
-        </form>
-        <div class="overview">
-          <h1 id="city">New York</h1>
-          <ul>
-            <li id="date">Friday 12:00</li>
-            <li id="description">Partly Cloudy</li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix weather-temperature">
-              <img src="" alt="clear" id="icon" class="float-left" />
-              <div class="float-left">
-                <strong id="temperature">12</strong>
-                <span class="units">
-                  <a href="" id="celsius-link" class="active">°C</a> |
-                  <a href="" id="faren-link"> °F </a></span
-                >
+          <div class="weather-forecast" id="forecast">
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">Thu</div>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt=""
+                  width="42"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max"> 18° </span>
+                  <span class="weather-forecast-temperature-min"> 12° </span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity">34</span>%</li>
-              <li>Wind: <span id="wind">6</span>km/h</li>
-            </ul>
-          </div>
         </div>
+        <p>
+          This page is coded by
+          <a href="" target="_blank"> KIRTI SINGLA </a>and is
+          <a
+            href="https://github.com/codesanta142/Weather-Forecast"
+            target="_blank"
+          >
+            open sourced on Github</a
+          >
+        </p>
       </div>
-      <p>
-        This page is coded by
-        <a href="" target="_blank"> KIRTI SINGLA </a>and is
-        <a href="https://github.com/codesanta142/Weather-Forecast" target="_blank"> open sourced on Github</a>
-      </p>
     </div>
 
     <script src="src/index.js"></script>
